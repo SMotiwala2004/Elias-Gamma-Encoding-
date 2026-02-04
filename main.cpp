@@ -35,7 +35,7 @@ std::vector<charData> charInfo;
 int main() {
     int number_of_symbols;
     std::cin >> number_of_symbols;
-
+    // Input character data from input up to number of symbols provided 
     for (int i = 0; i < number_of_symbols; i++)
     {
         charData newChar;;
@@ -49,6 +49,24 @@ int main() {
         charInfo.push_back(newChar);
         std::cout << charInfo[i].symbol << " " << charInfo[i].frequency << std::endl;
     }
+
+    std::string bits;
+    std::cin >> bits;
+
+    // auto& allows me to refer each element and modify it directly
+    int bitIndex = 0;
+
+    for(auto& charInfo : charInfo) {
+        // Assign start index for each seperate character
+        charInfo.start_index = bitIndex;
+        // Calculate end index for each character 
+        for(int i = 0;  i < charInfo.frequency; i++) {
+            // N is the number of leading zeros
+            int N = 0;
+
+        }
+    }
+
     return 0;
     
 }

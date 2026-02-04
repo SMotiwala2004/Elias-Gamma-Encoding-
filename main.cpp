@@ -62,7 +62,7 @@ int main() {
         // Calculate end index for each character 
         for(int i = 0;  i < charInfo.frequency; i++) {
             // N is the number of leading zeros
-            int N = 0;
+            int N = 0; 
 
         }
     }

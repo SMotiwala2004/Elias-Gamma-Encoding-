@@ -23,6 +23,32 @@ D 3 -> Character D with frequency 4
 Position values for symbols in binary are in the same order as the characters provided above.
 */
 
+struct charData {
+    char symbol;
+    int frequency;
+    int start_index;
+    int end_index;
+};
+
+std::vector<charData> charInfo;
+
 int main() {
+    int number_of_symbols;
+    std::cin >> number_of_symbols;
+
+    for (int i = 0; i < number_of_symbols; i++)
+    {
+        charData newChar;;
+        char symbol;
+        int frequency;
+        std::cin >> symbol >> frequency;
+
+        newChar.symbol = symbol;
+        newChar.frequency = frequency;
+        
+        charInfo.push_back(newChar);
+        std::cout << charInfo[i].symbol << " " << charInfo[i].frequency << std::endl;
+    }
+    return 0;
     
 }

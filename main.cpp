@@ -62,11 +62,19 @@ int main() {
         // Calculate end index for each character 
         for(int i = 0;  i < charInfo.frequency; i++) {
             // N is the number of leading zeros
-            int N = 0; 
+            int N = 0;
+            // Count number of leading zeros
+            while(bits[bitIndex] == '0') {
+                N++;
+                bitIndex++;
+            }
+            // Move bitIndex to number of 0s + 1
+            bitIndex += (N + 1);
 
         }
-    }
 
+        charInfo.end_index = bitIndex - 1;
+    }
     return 0;
     
 }
